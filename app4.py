@@ -99,7 +99,7 @@ def login():
         elif role == "student":
             user = Student.query.filter_by(roll_number=user_id).first()
 
-        if user and user.password == password:
+        if user and check_password_hash(user.password, password):
             session["role"] = role
             session["user_id"] = user_id
 

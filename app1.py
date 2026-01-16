@@ -1,5 +1,6 @@
 from flask import Flask, render_template, redirect, url_for, request, session
 from flask_sqlalchemy import SQLAlchemy
+from werkzeug.security import generate_password_hash
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key' 
@@ -85,7 +86,7 @@ def student_registration_step2():
             phone=session.get('reg_contact'),
             email=session.get('reg_email'),
             class_teacher=session.get('reg_teacher'),
-            password=password_input 
+            password= generate_password_hash('password')
         )
         
         try:
