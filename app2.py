@@ -31,6 +31,12 @@ def index():
     # This renders your main landing page with the 3 cards
     return render_template('index.html')
 
+@app.route('/signin')
+def signin():
+    # This renders your main landing page with the 3 cards
+    return render_template('Signin.html')
+
+
 @app.route('/register/<role>')
 def register(role):
     if role == 'student':
