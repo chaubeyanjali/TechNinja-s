@@ -1,6 +1,5 @@
 from flask import Flask, render_template, redirect, url_for, request, session
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import JSON
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key' 
@@ -15,10 +14,10 @@ db = SQLAlchemy(app)
 class Teacher(db.Model):
     id = db.Column(db.Integer, primary_key=True) # ID is handled automatically
     full_name = db.Column(db.String(100), nullable=False)
-    teacher_ID = db.Column(db.String(50), nullable=False, unique=True)
+    teacher_id = db.Column(db.String(50), nullable=False, unique=True)
     phone = db.Column(db.String(15), nullable=False)
     email = db.Column(db.String(100), nullable=False, unique=True)
-    subject = db.Column(JSON, nullable=False)
+    subject = db.Column(db.String(100), nullable=False)
     # Put the password here so it is linked to the teacher!
     password = db.Column(db.String(100), nullable=False) 
 
@@ -51,7 +50,7 @@ def teacher_registration_step1():
        session['reg_id'] = request.form.get('teacher_id')
        session['reg_contact'] = request.form.get('contact')
        session['reg_email'] = request.form.get('email')
-       session['reg_subjects'] = request.form.getlist('subjects')
+       session['reg_subject'] = request.form.get('subject')
 
        return redirect(url_for('teacher_registration_step2'))
     

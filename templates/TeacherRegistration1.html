@@ -1,4 +1,4 @@
-teacher.html                                                                                                                              <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -60,10 +60,8 @@ teacher.html                                                                    
                 <div class="form-group full-width">
                     <label>Subjects You Can Teach</label>
                     <div class="subject-input-wrapper">
-                        <input type="text" name="subjects" id="subjectInput" placeholder="Add a subject">
-                        <button type="button" class="btn-add" onclick="addSubject()">Add</button>
+                        <input type="text" name="subject" id="subjectInput" placeholder="Add a subject">
                     </div>
-                    <div id="tagContainer" class="tag-container"></div>
                 </div>
 
                 <button type="submit" class="btn-continue"><a class="back" href="{{url_for('teacher_registration_step2')}}">
@@ -72,8 +70,6 @@ teacher.html                                                                    
             </form>
         </main>
     </div>
-
-    <script src="/static/js/TeacherRegistration1.js"></script>
 </body>
 </html>                                                                                                                                                                                       teacher.css                                                       * {
     

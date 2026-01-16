@@ -18,7 +18,7 @@
         </header>
 
         <div class="registration-card">
-            <a href="{{ url_for('index') }}" class="back-link">← Back to role selection</a>
+            <a href="{{ url_for('admin_registration_step1') }}" class="back-link">← Back to role selection</a>
 
             <div class="card-content">
                 <div class="icon-section">
@@ -34,10 +34,10 @@
                     <span class="dot"></span>
                 </div>
 
-                <form id="adminStep2Form" method="POST" action="/register/admin">
+                <form id="adminStep2Form" method="POST" action="/register/admin/step-2">
                     <div class="input-group">
                         <label>User ID</label>
-                        <input type="text" placeholder="Choose a unique user ID" required>
+                        <input type="text" name="userid" placeholder="Choose a unique user ID" required>
                     </div>
 
                     <div class="input-group">
@@ -58,7 +58,5 @@
             </div>
         </div>
     </div>
-
-
 </body>
 </html>
