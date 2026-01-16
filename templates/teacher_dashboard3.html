@@ -1,9 +1,9 @@
-teacher dashboard                                                                       teadash1.html                                                       <!DOCTYPE html>
+teadash4.html                                                                                                               <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teacher Dashboard - Approve Students</title>
+    <title>Teacher Dashboard - View Timetable</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,23 +16,18 @@ teacher dashboard                                                               
         .sidebar-card {
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
         }
-        /* Dashboard Green Theme - Screenshot matching */
+        /* Teacher Dashboard Green/Teal Theme */
         .active-nav-green {
-            background-color: #0d9488; /* Teal-Green color */
+            background-color: #0d9488;
             color: white !important;
             box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
         }
         .active-nav-green i {
             color: white !important;
         }
-        .warning-banner {
-            background-color: #fffbeb;
-            border: 1px solid #fef3c7;
-            color: #b45309;
-        }
     </style>
 </head>
-<body class="min-h-screen">
+<body class="min-h-screen text-gray-800">
 
     <nav class="bg-white border-b border-gray-100 px-8 py-3 flex justify-between items-center sticky top-0 z-50">
         <div class="flex items-center gap-3">
@@ -46,7 +41,7 @@ teacher dashboard                                                               
         </div>
         <button class="flex items-center gap-2 border border-gray-200 px-4 py-1.5 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50 transition">
             <i data-lucide="log-out" class="w-4 h-4"></i>
-            <a href="{{ url_for('index') }}">
+            <a href="C:\Users\Dell\OneDrive\Desktop\technijas\Sign Up\signup.html">
             Logout</a>
         </button>
     </nav>
@@ -68,9 +63,9 @@ teacher dashboard                                                               
             <div class="bg-white rounded-3xl sidebar-card border border-gray-50 overflow-hidden">
                 <ul class="flex flex-col py-2">
                     <li>
-                        <a href="teadash1.html" class="flex items-center gap-4 px-6 py-4 active-nav-green mx-2 rounded-2xl">
-                            <i data-lucide="users" class="w-5 h-5"></i>
-                            <span class="text-[15px] font-bold">Approve Students</span>
+                        <a href="teadash1.html" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
+                            <i data-lucide="users" class="w-5 h-5 text-gray-400"></i>
+                            <span class="text-[15px] font-medium">Approve Students</span>
                         </a>
                     </li>
                     <li>
@@ -80,9 +75,9 @@ teacher dashboard                                                               
                         </a>
                     </li>
                     <li>
-                        <a href="teadash3.html" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
-                            <i data-lucide="calendar" class="w-5 h-5 text-gray-400"></i>
-                            <span class="text-[15px] font-medium">View Timetable</span>
+                        <a href="teadash3.html" class="flex items-center gap-4 px-6 py-4 active-nav-green mx-2 rounded-2xl">
+                            <i data-lucide="calendar" class="w-5 h-5"></i>
+                            <span class="text-[15px] font-bold">View Timetable</span>
                         </a>
                     </li>
                     <li>
@@ -108,31 +103,39 @@ teacher dashboard                                                               
         </aside>
 
         <main class="flex-1">
-            <div class="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden flex flex-col min-h-[600px]">
-                <div class="p-8 border-b border-gray-50">
+            <div class="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden flex flex-col min-h-[500px]">
+                <div class="p-8 border-b border-gray-50 flex justify-between items-center">
                     <div class="flex items-center gap-4">
-                        <div class="bg-[#fef3c7] p-3 rounded-xl text-yellow-500">
-                            <i data-lucide="user-check" class="w-6 h-6"></i>
+                        <div class="bg-[#eff6ff] p-3 rounded-xl text-blue-500">
+                            <i data-lucide="calendar" class="w-6 h-6"></i>
                         </div>
-                        <div>
-                            <h2 class="text-xl font-bold text-gray-800">Student Approval</h2>
-                            <p class="text-sm text-gray-400">Review and approve student registrations</p>
+                        <h2 class="text-xl font-bold text-gray-800">School Timetables</h2>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="relative w-32">
+                            <select class="w-full bg-white border border-gray-200 rounded-xl px-4 py-2 text-sm text-gray-400 focus:ring-2 focus:ring-teal-100 outline-none appearance-none cursor-pointer">
+                                <option disabled selected>Class</option>
+                            </select>
+                            <i data-lucide="chevron-down" class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+                        </div>
+                        <div class="relative w-32">
+                            <select class="w-full bg-white border border-gray-200 rounded-xl px-4 py-2 text-sm text-gray-400 focus:ring-2 focus:ring-teal-100 outline-none appearance-none cursor-pointer">
+                                <option disabled selected>Division</option>
+                            </select>
+                            <i data-lucide="chevron-down" class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"></i>
                         </div>
                     </div>
                 </div>
 
-                <div class="mx-8 mt-6 p-3 rounded-xl warning-banner flex items-center gap-3">
-                    <i data-lucide="alert-circle" class="w-5 h-5"></i>
-                    <p class="text-sm font-medium">You have <span id="studentCount">0</span> student(s) waiting for approval</p>
-                </div>
-
-                <div id="studentApprovalList" class="p-8 space-y-4 flex-1">
-                    <div class="flex flex-col items-center justify-center h-full py-20 border-2 border-dashed border-gray-50 rounded-3xl">
-                        <div class="bg-gray-50 p-4 rounded-full mb-3">
-                            <i data-lucide="users-round" class="w-10 h-10 text-gray-200"></i>
-                        </div>
-                        <p class="text-sm text-gray-300 font-medium">Waiting for student data from backend...</p>
+                <div class="flex-1 flex flex-col items-center justify-center py-24 text-center">
+                    <div class="bg-gray-50 p-8 rounded-full mb-6 border border-gray-50">
+                        <i data-lucide="calendar" class="w-16 h-16 text-gray-200"></i>
                     </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">No Timetable Available</h3>
+                    <p class="text-gray-400 text-sm max-w-xs mx-auto">
+                        Select a class and division to view the timetable
+                    </p>
                 </div>
             </div>
         </main>
@@ -142,22 +145,13 @@ teacher dashboard                                                               
         // Icons initialize karne ke liye
         lucide.createIcons();
 
-        // Backend Integration Example:
-        // Is function ka use karke aap student cards dynamic add kar sakte hain
-        function loadStudents(students) {
-            const list = document.getElementById('studentApprovalList');
-            const count = document.getElementById('studentCount');
-            
-            if(students && students.length > 0) {
-                count.innerText = students.length;
-                list.innerHTML = ''; // Blank area clear karega
-                
-                // Logic to build Anjali Chaubey type cards
-                students.forEach(student => {
-                    // Build HTML here...
-                });
-            }
-        }
+        // Dropdown interactive logic
+        document.querySelectorAll('select').forEach(select => {
+            select.addEventListener('change', function() {
+                this.classList.remove('text-gray-400');
+                this.classList.add('text-gray-800');
+            });
+        });
     </script>
 </body>
 </html>

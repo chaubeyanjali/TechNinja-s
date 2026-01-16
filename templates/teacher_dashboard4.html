@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Notice - Teacher Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+        }
+        .sidebar-card {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        }
+        /* Teacher Dashboard Green Theme matching the image */
+        .active-nav-green {
+            background-color: #0d9488;
+            color: white !important;
+            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
+        }
+        .active-nav-green i {
+            color: white !important;
+        }
+        /* Form focus colors */
+        .input-focus:focus {
+            border-color: #0d9488;
+            right: 2px;
+            right-color: #f0fdfa;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-800">
+
+    <nav class="bg-white border-b border-gray-100 px-8 py-3 flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center gap-3">
+            <div class="bg-[#0d9488] p-2 rounded-xl text-white">
+                <i data-lucide="settings" class="w-6 h-6"></i>
+            </div>
+            <div>
+                <h1 class="text-lg font-bold text-gray-800 leading-tight">Teacher Dashboard</h1>
+                <p class="text-[11px] text-gray-400">Welcome, Samiksha Chaudhary</p>
+            </div>
+        </div>
+        <button class="flex items-center gap-2 border border-gray-200 px-4 py-1.5 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50 transition">
+            <i data-lucide="log-out" class="w-4 h-4"></i>
+            <a href="C:\Users\Dell\OneDrive\Desktop\technijas\Sign Up\signup.html">
+            Logout</a>
+        </button>
+    </nav>
+
+    <div class="flex p-6 gap-8 max-w-[1600px] mx-auto">
+        <aside class="w-72 flex flex-col gap-6 shrink-0">
+            <div class="bg-white p-5 rounded-3xl sidebar-card border border-gray-50">
+                <div class="flex items-center gap-3 bg-[#f0fdfa] p-3 rounded-2xl">
+                    <div class="bg-[#0d9488] text-white p-2.5 rounded-full">
+                        <i data-lucide="user" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 text-sm">Samiksha Chaudhary</h3>
+                        <p class="text-[11px] text-gray-400">ID: TC-02</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl sidebar-card border border-gray-50 overflow-hidden">
+                <ul class="flex flex-col py-2">
+                    <li>
+                        <a href="teadash1.html" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
+                            <i data-lucide="users" class="w-5 h-5 text-gray-400"></i>
+                            <span class="text-[15px] font-medium">Approve Students</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="teadash2.html" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
+                            <i data-lucide="clock" class="w-5 h-5 text-gray-400"></i>
+                            <span class="text-[15px] font-medium">My Availability</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="teadash3.html" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
+                            <i data-lucide="calendar" class="w-5 h-5 text-gray-400"></i>
+                            <span class="text-[15px] font-medium">View Timetable</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="teadash4.html" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
+                            <i data-lucide="bell" class="w-5 h-5 text-gray-400"></i>
+                            <span class="text-[15px] font-medium">View Notices</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="teadash5.html" class="flex items-center gap-4 px-6 py-4 active-nav-green mx-2 rounded-2xl">
+                            <i data-lucide="plus-circle" class="w-5 h-5"></i>
+                            <span class="text-[15px] font-bold">Post Notice</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="teadash6.html" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
+                            <i data-lucide="send" class="w-5 h-5 text-gray-400"></i>
+                            <span class="text-[15px] font-medium">Send Request</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="flex-1">
+            <div class="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden flex flex-col">
+                <div class="p-8 border-b border-gray-50">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-[#f0fdfa] p-3 rounded-xl text-teal-600">
+                            <i data-lucide="plus-circle" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-bold text-gray-800">Post Notice</h2>
+                            <p class="text-sm text-gray-400">Create a new notice for students and teachers</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="noticeForm" class="p-8 space-y-6">
+                    <div class="space-y-2">
+                        <label class="block text-sm font-bold text-gray-700">Notice Title</label>
+                        <input type="text" placeholder="Enter notice title" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-teal-100 focus:border-[#0d9488] outline-none transition placeholder-gray-300">
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="block text-sm font-bold text-gray-700">Notice Content</label>
+                        <textarea rows="6" placeholder="Enter notice content..." class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-teal-100 focus:border-[#0d9488] outline-none transition placeholder-gray-300 resize-none"></textarea>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-gray-700">Priority</label>
+                            <select class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-teal-100 outline-none appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,<svg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2220%22%20height=%2220%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22%2394a3b8%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22><polyline%20points=%226%209%2012%2015%2018%209%22></polyline></svg>')] bg-[right_1rem_center] bg-no-repeat">
+                                <option>Normal</option>
+                                <option>High</option>
+                                <option>Urgent</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-gray-700">Expiry Date (Optional)</label>
+                            <input type="date" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-teal-100 outline-none text-gray-500">
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <label class="block text-sm font-bold text-gray-700">Target Audience</label>
+                        <div class="flex gap-6">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" checked class="w-4 h-4 rounded border-gray-300 text-[#0d9488] focus:ring-[#0d9488]">
+                                <span class="text-sm text-gray-600">Everyone</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-[#0d9488] focus:ring-[#0d9488]">
+                                <span class="text-sm text-gray-600">Students</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-[#0d9488] focus:ring-[#0d9488]">
+                                <span class="text-sm text-gray-600">Teachers</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full bg-[#0d9488] text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-teal-100 hover:bg-[#0f766e] transition transform active:scale-[0.99] mt-4">
+                        <i data-lucide="send" class="w-5 h-5"></i>
+                        Post Notice
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Icons initialize karne ke liye
+        lucide.createIcons();
+
+        // Form Submit Handler
+        document.getElementById('noticeForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Yahan aap backend (Node.js/MongoDB) API call add kar sakte hain
+            alert("Notice has been posted successfully!");
+        });
+    </script>
+</body>
+</html>

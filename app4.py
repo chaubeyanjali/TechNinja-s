@@ -120,15 +120,66 @@ def login():
 def admin_dashboard():
     return render_template("admin_dashboard.html")
 
+@app.route("/admin/dashboard/edit_timetable")
+@login_required("admin")
+def admin_dashboard1():
+    return render_template("admin_dashboard1.html")
+
+@app.route("/admin/dashboard/post_notice")
+@login_required("admin")
+def admin_dashboard2():
+    return render_template("admin_dashboard2.html")
+
+@app.route("/admin/dashboard/view_notice")
+@login_required("admin")
+def admin_dashboard3():
+    return render_template("admin_dashboard3.html")
+
+@app.route("/admin/dashboard/view_request")
+@login_required("admin")
+def admin_dashboard4():
+    return render_template("admin_dashboard4.html")
+
+
 @app.route("/teacher/dashboard")
 @login_required("teacher")
 def teacher_dashboard():
     return render_template("teacher_dashboard.html")
 
+@app.route("/teacher/dashboard/availability")
+@login_required("teacher")
+def teacher_dashboard2():
+    return render_template("teacher_dashboard1.html")
+
+@app.route("/teacher/dashboard/view_timetable")
+@login_required("teacher")
+def teacher_dashboard3():
+    return render_template("teacher_dashboard2.html")
+
+@app.route("/teacher/dashboard/view_notice")
+@login_required("teacher")
+def teacher_dashboard4():
+    return render_template("teacher_dashboard3.html")
+
+@app.route("/teacher/dashboard/post_notice")
+@login_required("teacher")
+def teacher_dashboard5():
+    return render_template("teacher_dashboard4.html")
+
+@app.route("/teacher/dashboard/send_request")
+@login_required("teacher")
+def teacher_dashboard5():
+    return render_template("teacher_dashboard5.html")
+
 @app.route("/student/dashboard")
 @login_required("student")
 def student_dashboard():
     return render_template("student_dashboard.html")
+
+@app.route("/student/dashboard/view_notice")
+@login_required("student")
+def student_dashboard1():
+    return render_template("student_dashboard1.html")
 
 # ---------------- LOGOUT ----------------
 @app.route("/logout")

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Notices - Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+        }
+        .sidebar-card {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        }
+        .active-nav {
+            background: linear-gradient(90deg, #9333ea 0%, #7c3aed 100%);
+            color: white !important;
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
+        }
+        .active-nav i {
+            color: white !important;
+        }
+        /* Dashboard Container Height */
+        .content-area {
+            min-height: 500px;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-800">
+
+    <nav class="bg-white border-b border-gray-100 px-8 py-3 flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center gap-3">
+            <div class="bg-[#7c3aed] p-2 rounded-xl text-white">
+                <i data-lucide="shield" class="w-6 h-6"></i>
+            </div>
+            <div>
+                <h1 class="text-lg font-bold text-gray-800 leading-tight">Admin Dashboard</h1>
+                <p class="text-[11px] text-gray-400">Welcome, Anjali Chaubey</p>
+            </div>
+        </div>
+        <button class="flex items-center gap-2 border border-gray-200 px-4 py-1.5 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50 transition">
+            <i data-lucide="log-out" class="w-4 h-4"></i>
+            <a href="C:\Users\Dell\OneDrive\Desktop\technijas\Sign Up\signup.html">
+            Logout</a>
+        </button>
+    </nav>
+
+    <div class="flex p-6 gap-8 max-w-[1600px] mx-auto">
+        <aside class="w-72 flex flex-col gap-6 shrink-0">
+            <div class="bg-white p-5 rounded-3xl sidebar-card border border-gray-50">
+                <div class="flex items-center gap-3 bg-[#f5f3ff] p-3 rounded-2xl mb-4">
+                    <div class="bg-[#9333ea] text-white p-2.5 rounded-full">
+                        <i data-lucide="user" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 text-sm">Anjali Chaubey</h3>
+                        <p class="text-[11px] text-gray-400">Administrator</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="bg-[#eff6ff] p-3 rounded-2xl text-center">
+                        <span class="block text-blue-600 font-bold text-xl">1</span>
+                        <span class="text-[9px] text-blue-400 font-bold uppercase tracking-wider">Timetables</span>
+                    </div>
+                    <div class="bg-[#fffbeb] p-3 rounded-2xl text-center">
+                        <span class="block text-yellow-600 font-bold text-xl">0</span>
+                        <span class="text-[9px] text-yellow-400 font-bold uppercase tracking-wider">Requests</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl sidebar-card border border-gray-50 overflow-hidden">
+                <ul class="flex flex-col py-2">
+                    <li>
+                        <a href="addash1.html" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
+                            <i data-lucide="sparkles" class="w-5 h-5 text-gray-400"></i>
+                            <span class="text-[15px] font-medium">Generate Timetable</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="addash2.html" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
+                            <i data-lucide="edit-3" class="w-5 h-5 text-gray-400"></i>
+                            <span class="text-[15px] font-medium">Edit Timetable</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="addash3.html" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
+                            <i data-lucide="plus-circle" class="w-5 h-5 text-gray-400"></i>
+                            <span class="text-[15px] font-medium">Post Notice</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="addash4.html" class="flex items-center gap-4 px-6 py-4 active-nav mx-2 rounded-2xl">
+                            <i data-lucide="bell" class="w-5 h-5"></i>
+                            <span class="text-[15px] font-bold">View Notices</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="addash5.html" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
+                            <i data-lucide="inbox" class="w-5 h-5 text-gray-400"></i>
+                            <span class="text-[15px] font-medium">View Requests</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="flex-1">
+            <div class="bg-white rounded-3xl border border-gray-100 shadow-sm content-area flex flex-col">
+                <div class="p-8 border-b border-gray-50 flex justify-between items-center">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-[#fffbeb] p-3 rounded-xl text-yellow-500">
+                            <i data-lucide="bell" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-bold text-gray-800">Teacher Notices</h2>
+                            <p class="text-sm text-gray-400">Manage and view all active notices</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 px-3 py-1 rounded-lg border border-gray-100">
+                        <span id="noticeCount" class="text-[11px] font-bold text-gray-500">0 notices</span>
+                    </div>
+                </div>
+
+                <div id="noticesList" class="p-8 space-y-4 flex-1">
+                    <div class="flex flex-col items-center justify-center h-full opacity-20 py-20">
+                        <i data-lucide="inbox" class="w-12 h-12 mb-2"></i>
+                        <p class="text-sm">Waiting for backend data...</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Icons initialize karne ke liye
+        lucide.createIcons();
+
+        // JS logic to inject notices from backend
+        // Aap is function ka use karke backend se aayi hui notices add kar sakte hain
+        function displayNotices(notices) {
+            const container = document.getElementById('noticesList');
+            const countLabel = document.getElementById('noticeCount');
+            
+            if (notices.length > 0) {
+                container.innerHTML = ''; // Clear the waiting message
+                countLabel.innerText = `${notices.length} notice${notices.length > 1 ? 's' : ''}`;
+                
+                notices.forEach(notice => {
+                    // Logic to build notice card
+                });
+            }
+        }
+    </script>
+</body>
+</html>

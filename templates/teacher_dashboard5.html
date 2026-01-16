@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Request - Teacher Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+        }
+        .sidebar-card {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        }
+        /* Teacher Dashboard Green Theme */
+        .active-nav-green {
+            background-color: #0d9488;
+            color: white !important;
+            box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
+        }
+        .active-nav-green i {
+            color: white !important;
+        }
+        /* Custom Blue Button for Send Request */
+        .btn-send-blue {
+            background-color: #3b82f6;
+            transition: all 0.2s ease;
+        }
+        .btn-send-blue:hover {
+            background-color: #2563eb;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-800">
+
+    <nav class="bg-white border-b border-gray-100 px-8 py-3 flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center gap-3">
+            <div class="bg-[#0d9488] p-2 rounded-xl text-white">
+                <i data-lucide="settings" class="w-6 h-6"></i>
+            </div>
+            <div>
+                <h1 class="text-lg font-bold text-gray-800 leading-tight">Teacher Dashboard</h1>
+                <p class="text-[11px] text-gray-400">Welcome, Samiksha Chaudhary</p>
+            </div>
+        </div>
+        <button class="flex items-center gap-2 border border-gray-200 px-4 py-1.5 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50 transition">
+            <i data-lucide="log-out" class="w-4 h-4"></i>
+            <a href="C:\Users\Dell\OneDrive\Desktop\technijas\Sign Up\signup.html">
+            Logout</a>
+        </button>
+    </nav>
+
+    <div class="flex p-6 gap-8 max-w-[1600px] mx-auto">
+        <aside class="w-72 flex flex-col gap-6 shrink-0">
+            <div class="bg-white p-5 rounded-3xl sidebar-card border border-gray-50">
+                <div class="flex items-center gap-3 bg-[#f0fdfa] p-3 rounded-2xl">
+                    <div class="bg-[#0d9488] text-white p-2.5 rounded-full">
+                        <i data-lucide="user" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 text-sm">Samiksha Chaudhary</h3>
+                        <p class="text-[11px] text-gray-400">ID: TC-02</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl sidebar-card border border-gray-50 overflow-hidden">
+                <ul class="flex flex-col py-2">
+                    <li>
+                        <a href="teadash1.html" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
+                            <i data-lucide="users" class="w-5 h-5 text-gray-400"></i>
+                            <span class="text-[15px] font-medium">Approve Students</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="teadash2.html" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
+                            <i data-lucide="clock" class="w-5 h-5 text-gray-400"></i>
+                            <span class="text-[15px] font-medium">My Availability</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="teadash3.html" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
+                            <i data-lucide="calendar" class="w-5 h-5 text-gray-400"></i>
+                            <span class="text-[15px] font-medium">View Timetable</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="teadash4.html" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
+                            <i data-lucide="bell" class="w-5 h-5 text-gray-400"></i>
+                            <span class="text-[15px] font-medium">View Notices</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="teadash5.html" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
+                            <i data-lucide="plus-circle" class="w-5 h-5 text-gray-400"></i>
+                            <span class="text-[15px] font-medium">Post Notice</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="teadash6.html" class="flex items-center gap-4 px-6 py-4 active-nav-green mx-2 rounded-2xl">
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                            <span class="text-[15px] font-bold">Send Request</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="flex-1">
+            <div class="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden flex flex-col">
+                <div class="p-8 border-b border-gray-50">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-[#eff6ff] p-3 rounded-xl text-blue-500">
+                            <i data-lucide="send" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-bold text-gray-800">Send Request to Admin</h2>
+                            <p class="text-sm text-gray-400">Request changes to your timetable schedule</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="requestForm" class="p-8 space-y-6">
+                    <div class="space-y-2">
+                        <label class="block text-sm font-bold text-gray-700">Request Type</label>
+                        <select class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-100 outline-none appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,<svg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2220%22%20height=%2220%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22%2394a3b8%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22><polyline%20points=%226%209%2012%2015%2018%209%22></polyline></svg>')] bg-[right_1rem_center] bg-no-repeat">
+                            <option value="" disabled selected>Select request type</option>
+                            <option>Reschedule Lecture</option>
+                            <option>Leave Request</option>
+                        </select>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-gray-700">Class</label>
+                            <select class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-100 outline-none appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,<svg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2220%22%20height=%2220%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22%2394a3b8%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22><polyline%20points=%226%209%2012%2015%2018%209%22></polyline></svg>')] bg-[right_1rem_center] bg-no-repeat">
+                                <option value="" disabled selected>Select class</option>
+                                <option>Class 10th-A</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-gray-700">Division</label>
+                            <select class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-100 outline-none appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,<svg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2220%22%20height=%2220%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22%2394a3b8%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22><polyline%20points=%226%209%2012%2015%2018%209%22></polyline></svg>')] bg-[right_1rem_center] bg-no-repeat">
+                                <option value="" disabled selected>Select division</option>
+                                <option>A</option>
+                                <option>B</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="block text-sm font-bold text-gray-700">Subject</label>
+                        <select class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-100 outline-none appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,<svg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2220%22%20height=%2220%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22%2394a3b8%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22><polyline%20points=%226%209%2012%2015%2018%209%22></polyline></svg>')] bg-[right_1rem_center] bg-no-repeat">
+                            <option value="" disabled selected>Select subject</option>
+                            <option>Physics</option>
+                            <option>Geography</option>
+                        </select>
+                    </div>
+
+                    <div class="bg-[#f8fafc] p-6 rounded-2xl border border-gray-50 space-y-4">
+                        <div class="flex items-center gap-2 text-gray-700 font-bold text-sm">
+                            <i data-lucide="calendar" class="w-4 h-4"></i>
+                            Current Schedule
+                        </div>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="block text-xs font-bold text-gray-500 uppercase">Day</label>
+                                <select class="w-full bg-white border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-blue-100 outline-none appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,<svg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2218%22%20height=%2218%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22%2394a3b8%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22><polyline%20points=%226%209%2012%2015%2018%209%22></polyline></svg>')] bg-[right_1rem_center] bg-no-repeat">
+                                    <option value="" disabled selected>Select day</option>
+                                    <option>Monday</option>
+                                </select>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-xs font-bold text-gray-500 uppercase">Time Slot</label>
+                                <select class="w-full bg-white border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-blue-100 outline-none appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,<svg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2218%22%20height=%2218%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22%2394a3b8%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22><polyline%20points=%226%209%2012%2015%2018%209%22></polyline></svg>')] bg-[right_1rem_center] bg-no-repeat">
+                                    <option value="" disabled selected>Select time</option>
+                                    <option>09:00 AM - 10:00 AM</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="block text-sm font-bold text-gray-700">Reason for Request</label>
+                        <textarea rows="4" placeholder="Please explain why you need this change..." class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-100 outline-none transition placeholder-gray-300 resize-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full btn-send-blue text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-blue-100 transition transform active:scale-[0.99] mt-4">
+                        <i data-lucide="send" class="w-5 h-5"></i>
+                        Send Request
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Icons initialize karne ke liye
+        lucide.createIcons();
+
+        // Form Submission Logic
+        document.getElementById('requestForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Your request has been successfully sent to the administrator!");
+            // Yahan aap backend (Node.js/Express) API call add kar sakte hain
+        });
+
+        // Dropdown selection color change
+        document.querySelectorAll('select').forEach(select => {
+            select.addEventListener('change', function() {
+                if(this.value !== "") {
+                    this.classList.remove('text-gray-400');
+                    this.classList.add('text-gray-800');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
