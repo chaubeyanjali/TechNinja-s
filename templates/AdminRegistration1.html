@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduSchedule Pro - Admin Registration</title>
+    <link rel="stylesheet" href="/static/css/AdminRegistration1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <div class="logo-area">
+                <div class="logo-icon">📖</div>
+                <h1>EduSchedule Pro</h1>
+            </div>
+            <p class="subtitle">Automated Timetable Generation System</p>
+        </header>
+
+        <main class="registration-card">
+            <a href="{{ url_for('index') }}" class="back-link">← Back to role selection</a>
+            
+            <div class="card-content">
+                <div class="shield-icon">🛡️</div>
+                <h2>Admin Registration</h2>
+                <p>Fill in your details below</p>
+                
+                <div class="progress-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+
+                <form id="registrationForm">
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label>Full Name</label>
+                            <input type="text" id="fullName" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Admin ID</label>
+                            <input type="text" id="adminId" placeholder="Enter your admin ID" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Phone Number</label>
+                            <input type="tel" id="phone" placeholder="Enter phone number" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Email Address</label>
+                            <input type="email" id="email" placeholder="Enter email address" required>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="continue-btn">
+                        Continue <span>→</span>
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

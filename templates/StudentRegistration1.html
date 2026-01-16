@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration - EduSchedule Pro</title>
+    <link rel="stylesheet" href="/static/css/StudentRegistration1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="logo-section">
+            <div class="logo-icon">
+                <i class="fas fa-book-open"></i>
+            </div>
+            <h1>EduSchedule Pro</h1>
+            <p class="subtitle">Automated Timetable Generation System</p>
+        </header>
+
+        <a href="{{ url_for('index') }}" class="back-link">&larr; Back to role selection</a>
+
+        <main class="registration-card">
+            <div class="student-icon">
+                <i class="fas fa-user-graduate"></i>
+            </div>
+            
+            <h2>Student Registration</h2>
+            <p class="step-text">Fill in your details below</p>
+            
+            <div class="progress-steps">
+                <span class="step active"></span>
+                <span class="step "></span>
+                <span class="step "></span>
+            </div>
+
+            <form id="registrationForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Roll Number</label>
+                        <input type="text" placeholder="Enter your roll number" required>
+                    </div>
+                </div>
+
+                <div class="form-row-three">
+                    <div class="form-group">
+                        <label>Class</label>
+                        <select required>
+                            <option value="" disabled selected>Select class</option>
+                            <option value="bscit">BSc IT</option>
+                            <option value="cs">Computer Science</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Division</label>
+                        <select required>
+                            <option value="" disabled selected>Select division</option>
+                            <option value="a">A</option>
+                            <option value="b">B</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Stream</label>
+                        <select required>
+                            <option value="" disabled selected>Select stream</option>
+                            <option value="it">Information Technology</option>
+                            <option value="science">Science</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="Enter phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="Enter email address" required>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Class Teacher Name</label>
+                    <input type="text" placeholder="Enter your class teacher's name" required>
+                </div>
+
+                <button type="submit" class="continue-btn"><a class="color" href="studentslide1.html">
+                    
+                    Continue <i class="fas fa-arrow-right"></i></a>
+                </button>
+            </form>
+        </main>
+    </div>
+
+</body>
+</html>
