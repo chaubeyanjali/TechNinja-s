@@ -12,7 +12,7 @@ def home():
 @app.route("/student", methods=["GET", "POST"])
 def student():
     if request.method == "POST":
-        return render_template("student.html")
+        return render_template("StudentRegistration1.html")
     return redirect(url_for("home"))
 
 
