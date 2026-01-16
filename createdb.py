@@ -21,6 +21,7 @@ class Teacher(db.Model):
 # ---------- STUDENT TABLE ----------
 class Student(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    password = db.Column(db.String(10), unique=True)
     full_name = db.Column(db.String(100), nullable=False)
     roll_number = db.Column(db.String(50), nullable=False)
     student_class = db.Column(db.String(50), nullable=False)

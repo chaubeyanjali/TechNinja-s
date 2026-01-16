@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8fbff;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Header */
+.logo-box {
+    background-color: #8b5cf6;
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px;
+    font-size: 22px;
+}
+
+h1 { color: #1e293b; font-size: 26px; margin-bottom: 5px; }
+.tagline { color: #64748b; font-size: 14px; margin-bottom: 30px; }
+.back-nav { display: block; text-align: left; color: #64748b; font-size: 13px; margin-bottom: 15px; cursor: pointer; }
+
+/* Main Card */
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 45px 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+}
+
+.student-icon-header {
+    background-color: #eff6ff;
+    color: #3b82f6;
+    width: 55px;
+    height: 55px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+    font-size: 24px;
+}
+
+h2 { color: #1e293b; font-size: 24px; margin-bottom: 5px; }
+.status-text { color: #64748b; font-size: 14px; }
+
+/* Progress Dots */
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 20px 0 50px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #e2e8f0;
+    border-radius: 50%;
+}
+
+.dot.active {
+    background-color: #3b82f6;
+    width: 35px;
+    border-radius: 10px;
+}
+
+/* Success Icon Section */
+.success-check-container {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.check-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #dcfce7; /* Light green */
+    color: #22c55e;           /* Solid green */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+
+/* Text Content */
+.message-content h3 {
+    color: #1e293b;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.message-content p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    padding: 0 10px;
+}
+
+/* Button */
+.btn-login {
+    background: linear-gradient(90deg, #4461f2, #4461f2);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+.btn-login:hover {
+    transform: scale(1.05);
+}
