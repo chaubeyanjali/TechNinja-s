@@ -29,6 +29,22 @@ with app.app_context():
     db.create_all()
 
 # 4. ROUTES
+@app.route('/')
+def index():
+    # This renders your main landing page with the 3 cards
+    return render_template('index.html')
+
+@app.route('/register/<role>')
+def register(role):
+    if role == 'student':
+        return render_template('StudentRegistration1.html')
+    elif role == 'teacher':
+        return render_template('teacher_register.html')
+    elif role == 'admin':
+        return render_template('admin_register.html')
+    else:
+        # If someone types /register/xyz, send them back home
+        return redirect(url_for('index'))
 
 @app.route('/register/student', methods=['GET', 'POST'])
 def student_registration_step1():
@@ -42,7 +58,7 @@ def student_registration_step1():
        session['reg_email'] = request.form.get('email')
        session['reg_teacher'] = request.form.get('teacher')
 
-       return redirect(url_for('student_registration_step3'))
+       return redirect(url_for('student_registration_step2'))
     
     return render_template('StudentRegistration1.html')
 
