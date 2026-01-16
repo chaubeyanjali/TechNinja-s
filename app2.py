@@ -37,9 +37,9 @@ def register(role):
     if role == 'student':
         return render_template('StudentRegistration1.html')
     elif role == 'teacher':
-        return render_template('teacher_register.html')
+        return render_template('TeacherRegistration1.html')
     elif role == 'admin':
-        return render_template('admin_register.html')
+        return render_template('AdminRegistration1.html')
     else:
         # If someone types /register/xyz, send them back home
         return redirect(url_for('index'))
@@ -51,7 +51,7 @@ def teacher_registration_step1():
        session['reg_id'] = request.form.get('teacher_id')
        session['reg_contact'] = request.form.get('contact')
        session['reg_email'] = request.form.get('email')
-       session['reg_subject'] = request.form.getlist('teacher')
+       session['reg_subjects'] = request.form.getlist('subjects')
 
        return redirect(url_for('teacher_registration_step2'))
     
@@ -66,12 +66,12 @@ def teacher_registration_step2():
         password_input = request.form.get('password')
 
         # Create one student record with data from Session (Step 1) + Form (Step 2)
-        new_student = Student(
+        new_teacher = Teacher(
             full_name=session.get('reg_name'),
             teacher_id=session.get('reg_id'),
             phone=session.get('reg_contact'),
             email=session.get('reg_email'),
-            subject=session.get('reg_teacher'),
+            subjects=session.get('reg_subjects'),
             password=password_input 
         )
         

@@ -4,7 +4,7 @@ teacher.html                                                                    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teacher Registration - EduSchedule Pro</title>
-    <link rel="stylesheet" href="teacher.css">
+    <link rel="stylesheet" href="/static/css/TeacherRegistration1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -18,7 +18,7 @@ teacher.html                                                                    
             <p class="tagline">Automated Timetable Generation System</p>
         </header>
 
-        <a href="index.html" class="back-link">← Back to role selection</a>
+        <a href="{{ url_for('index') }}" class="back-link">← Back to role selection</a>
 
         <main class="registration-card">
             <div class="teacher-icon">
@@ -38,49 +38,42 @@ teacher.html                                                                    
                 <div class="form-row">
                     <div class="form-group">
                         <label>Full Name</label>
-                        <input type="text" placeholder="Enter your full name" required>
+                        <input type="text" name="name" placeholder="Enter your full name" required>
                     </div>
                     <div class="form-group">
                         <label>Teacher ID</label>
-                        <input type="text" placeholder="Enter your teacher ID" required>
+                        <input type="text" name="teacher_id" placeholder="Enter your teacher ID" required>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
                         <label>Phone Number</label>
-                        <input type="tel" placeholder="Enter phone number" required>
+                        <input type="tel" name="contact" placeholder="Enter phone number" required>
                     </div>
                     <div class="form-group">
                         <label>Email Address</label>
-                        <input type="email" placeholder="Enter email address" required>
+                        <input type="email" name="email" placeholder="Enter email address" required>
                     </div>
                 </div>
 
                 <div class="form-group full-width">
                     <label>Subjects You Can Teach</label>
                     <div class="subject-input-wrapper">
-                        <input type="text" id="subjectInput" placeholder="Add a subject">
+                        <input type="text" name="subjects" id="subjectInput" placeholder="Add a subject">
                         <button type="button" class="btn-add" onclick="addSubject()">Add</button>
                     </div>
-                    <div class="subject-tags" id="tagContainer">
-                        <span class="tag">+ Mathematics</span>
-                        <span class="tag">+ Physics</span>
-                        <span class="tag">+ Chemistry</span>
-                        <span class="tag">+ Biology</span>
-                        <span class="tag">+ English</span>
-                        <span class="tag">+ Hindi</span>
-                    </div>
+                    <div id="tagContainer" class="tag-container"></div>
                 </div>
 
-                <button type="submit" class="btn-continue"><a class="back" href="teacherslide.html">
+                <button type="submit" class="btn-continue"><a class="back" href="{{url_for('teacher_registration_step2')}}">
                     Continue </a> <i class="fas fa-arrow-right"></i>
                 </button>
             </form>
         </main>
     </div>
 
-    <script src="teacher.js"></script>
+    <script src="/static/js/TeacherRegistration1.js"></script>
 </body>
 </html>                                                                                                                                                                                       teacher.css                                                       * {
     

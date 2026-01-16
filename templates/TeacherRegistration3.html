@@ -4,7 +4,7 @@ teacherfinal.html                                                               
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Successful - EduSchedule Pro</title>
-    <link rel="stylesheet" href="teacherfinal.css">
+    <link rel="stylesheet" href="/static/css/TeacherRegistration3.css">
 </head>
 <body>
 
@@ -18,7 +18,7 @@ teacherfinal.html                                                               
         </header>
 
         <div class="success-card">
-            <button class="back-link">← Back to role selection</button>
+            <a href="{{ url_for('index') }}" class="back-link">← Back to role selection</a>
 
             <div class="card-content">
                 <div class="top-icon">
@@ -42,11 +42,9 @@ teacherfinal.html                                                               
                     <p class="info-text">Your teacher account has been created. You can now log in and start managing your schedule.</p>
                 </div>
 
-                <button id="loginBtn" class="login-btn"><a class="backheading" href="index.html"></a>Go to Login</a></button>
+                <button id="loginBtn" class="login-btn"><a class="backheading" href="{{ url_for('index') }}"></a>Go to Login</a></button>
             </div>
         </div>
     </div>
-
-    <script src="teacherfinal.js"></script>
 </body>
 </html>

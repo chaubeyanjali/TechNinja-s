@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduSchedule Pro - Teacher Registration</title>
-    <link rel="stylesheet" href="teacherslide.css">
+    <link rel="stylesheet" href="/static/css/TeacherRegistration2.css">
 </head>
 <body>
 
@@ -18,7 +18,7 @@
         </header>
 
         <div class="registration-card">
-            <a href="#" class="back-link">← Back to role selection</a>
+            <a href="{{ url_for('index') }}" class="back-link">← Back to role selection</a>
 
             <div class="card-body">
                 <div class="header-icon-container">
@@ -51,8 +51,8 @@
                     </div>
 
                     <div class="form-footer">
-                       <a href="teacher.html"> <button type="button" class="btn-back">Back</button></a>
-                        <button type="submit" class="btn-submit"><a href="teacherfinal.html">Create Account</a></button>
+                       <a href="{{url_for('teacher_registration_step1')}}"> <button type="button" class="btn-back">Back</button></a>
+                        <a href="{{url_for('teacher_registration_step3')}}"> <button type="button" class="btn-back">Create Account</button></a>
                     </div>
                 </form>
             </div>

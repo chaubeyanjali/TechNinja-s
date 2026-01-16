@@ -1,4 +1,4 @@
-*{
+admin.css                                                                                                                      * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -128,4 +128,8 @@ body {
 /* Responsive */
 @media (max-width: 600px) {
     .input-grid { grid-template-columns: 1fr; }
+}
+.design{
+    text-decoration: none;
+    color: white;
 }
