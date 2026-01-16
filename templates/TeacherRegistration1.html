@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+teacher.html                                                                                                                              <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teacher Registration - EduSchedule Pro</title>
-    <link rel="stylesheet" href="/static/css/TeacherRegistration1.css">
+    <link rel="stylesheet" href="teacher.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
             <p class="tagline">Automated Timetable Generation System</p>
         </header>
 
-        <a href="{{ url_for('index') }}" class="back-link">← Back to role selection</a>
+        <a href="index.html" class="back-link">← Back to role selection</a>
 
         <main class="registration-card">
             <div class="teacher-icon">
@@ -34,7 +34,7 @@
                 <span class="dot"></span>
             </div>
 
-            <form id="teacherForm">
+            <form id="teacherForm" method="POST" action="/register/teacher">
                 <div class="form-row">
                     <div class="form-group">
                         <label>Full Name</label>
@@ -73,12 +73,14 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn-continue">
-                    Continue <i class="fas fa-arrow-right"></i>
+                <button type="submit" class="btn-continue"><a class="back" href="teacherslide.html">
+                    Continue </a> <i class="fas fa-arrow-right"></i>
                 </button>
             </form>
         </main>
     </div>
 
+    <script src="teacher.js"></script>
 </body>
-</html>
+</html>                                                                                                                                                                                       teacher.css                                                       * {
+    
