@@ -23,35 +23,34 @@
             <p class="instruction">Select your role to get started</p>
 
             <div class="roles-container">
-                <div class="role-card" onclick="selectRole('Student')">
-                    <div class="icon-box blue-bg">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Student</h3>
-                    <p>Access your class timetable and notices</p>
-                    <a href="#" class="btn-link blue-text">Get Started &rarr;</a>
-                </div>
-
-                <div class="role-card" onclick="selectRole('Teacher')">
-                    <div class="icon-box green-bg">
-                        <i class="fas fa-user-gear"></i>
-                    </div>
-                    <h3>Teacher</h3>
-                    <p>Manage availability, approve students & view schedules</p>
-                    <a href="#" class="btn-link green-text">Get Started &rarr;</a>
-                </div>
-
-                <div class="role-card" onclick="selectRole('Admin')">
-    <div class="icon-box purple-bg">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-        </svg>
+    <div class="role-card">
+        <div class="icon-box blue-bg">
+            <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h3>Student</h3>
+        <p>Access your class timetable and notices</p>
+        <a href="{{ url_for('register', role='student') }}" class="btn-link blue-text">Get Started &rarr;</a>
     </div>
-    <h3>Admin</h3>
-    <p>Generate timetables & manage the institution</p>
-    <a href="#" class="btn-link purple-text">Get Started &rarr;</a>
-</div>
-            </div>
+
+    <div class="role-card">
+        <div class="icon-box green-bg">
+            <i class="fas fa-user-gear"></i>
+        </div>
+        <h3>Teacher</h3>
+        <p>Manage availability, approve students & view schedules</p>
+        <a href="{{ url_for('register', role='teacher') }}" class="btn-link green-text">Get Started &rarr;</a>
+    </div>
+
+    <div class="role-card">
+        <div class="icon-box purple-bg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+        </div>
+        <h3>Admin</h3>
+        <p>Generate timetables & manage the institution</p>
+        <a href="{{ url_for('register', role='admin') }}" class="btn-link purple-text">Get Started &rarr;</a>
+    </div>
         </main>
 
         <footer>
@@ -59,6 +58,5 @@
         </footer>
     </div>
 
-    <script src="/static/js/script.js"></script>
 </body>
 </html>

@@ -1,36 +1,37 @@
-from flask import Flask, render_template, redirect, url_for, request
+from flask import Flask, render_template, redirect, url_for
 
 app = Flask(__name__)
 
-# ---------- HOME ----------
-@app.route("/", methods=["GET"])
-def home():
-    return render_template("index.html")
+# 1. Home Page Route
+@app.route('/')
+def index():
+    # This renders your main landing page with the 3 cards
+    return render_template('index.html')
 
+@app.route('/register/student')
+def student_registration():
+    return render_template('StudentRegistration1.html')
 
-# ---------- STUDENT ----------
-@app.route("/student", methods=["GET", "POST"])
-def student():
-    if request.method == "POST":
-        return render_template("StudentRegistration1.html")
-    return redirect(url_for("home"))
+@app.route('/register/teacher')
+def teacher_registration():
+    return render_template('TeacherRegistration1.html')
 
+@app.route('/register/admin')
+def admin_registration():
+    return render_template('AdminRegistration1.html')
 
-# ---------- TEACHER ----------
-@app.route("/teacher", methods=["GET", "POST"])
-def teacher():
-    if request.method == "POST":
-        return render_template("teacher.html")
-    return redirect(url_for("home"))
+# 3. Unified Registration Route (The one you wrote)
+@app.route('/register/<role>')
+def register(role):
+    if role == 'student':
+        return render_template('StudentRegistration1.html')
+    elif role == 'teacher':
+        return render_template('teacher_register.html')
+    elif role == 'admin':
+        return render_template('admin_register.html')
+    else:
+        # If someone types /register/xyz, send them back home
+        return redirect(url_for('index'))
 
-
-# ---------- ADMIN ----------
-@app.route("/admin", methods=["GET", "POST"])
-def admin():
-    if request.method == "POST":
-        return render_template("admin.html")
-    return redirect(url_for("home"))
-
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=True)
