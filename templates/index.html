@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduSchedule Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="logo-section">
+            <div class="logo-icon">
+                <i class="fas fa-book-open"></i>
+            </div>
+            <h1>EduSchedule Pro</h1>
+            <p class="subtitle">Automated Timetable Generation System</p>
+        </header>
+
+        <main class="main-card">
+            <h2>Create Your Account</h2>
+            <p class="instruction">Select your role to get started</p>
+
+            <div class="roles-container">
+                <div class="role-card" onclick="selectRole('Student')">
+                    <div class="icon-box blue-bg">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Student</h3>
+                    <p>Access your class timetable and notices</p>
+                    <a href="#" class="btn-link blue-text">Get Started &rarr;</a>
+                </div>
+
+                <div class="role-card" onclick="selectRole('Teacher')">
+                    <div class="icon-box green-bg">
+                        <i class="fas fa-user-gear"></i>
+                    </div>
+                    <h3>Teacher</h3>
+                    <p>Manage availability, approve students & view schedules</p>
+                    <a href="#" class="btn-link green-text">Get Started &rarr;</a>
+                </div>
+
+                <div class="role-card" onclick="selectRole('Admin')">
+    <div class="icon-box purple-bg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+    </div>
+    <h3>Admin</h3>
+    <p>Generate timetables & manage the institution</p>
+    <a href="#" class="btn-link purple-text">Get Started &rarr;</a>
+</div>
+            </div>
+        </main>
+
+        <footer>
+            Already have an account? <a href="#">Sign in here</a>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
