@@ -1,6 +1,33 @@
 from flask import Flask, render_template, redirect, url_for, request, session
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
+app.secret_key = 'your_secret_key' # Added secret_key for sessions
+
+# 1. DB CONFIG
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
+
+# 2. DEFINE MODELS (MUST be above routes)
+class Student(db.Model):
+    id = db.Column(db.Integer, primary_key=True) # Increased length for security
+    full_name = db.Column(db.String(100), nullable=False)
+    roll_number = db.Column(db.String(50), nullable=False, unique=True)
+    student_class = db.Column(db.String(50), nullable=False)
+    division = db.Column(db.String(10), nullable=False)
+    stream = db.Column(db.String(50), nullable=False)
+    phone = db.Column(db.String(15), nullable=False)
+    email = db.Column(db.String(100), nullable=False, unique=True)
+    class_teacher = db.Column(db.String(100), nullable=False)
+
+class StudentPassword(db.Model):
+    password = db.Column(db.String(100), unique=True)
+
+# 3. CREATE TABLES
+with app.app_context():
+    db.create_all()
 
 # 1. Home Page Route
 @app.route('/')
@@ -38,39 +65,38 @@ def register(role):
 def student_registration_step1():
     if request.method == 'POST':
         # Store data from the first form into the session
-        session['reg_name'] = request.form.get('name')
-        session['reg_roll'] = request.form.get('roll-number')
-        session['reg_class'] = request.form.get('class')
-        session['reg_div'] = request.form.get('div')
-        session['reg_stream'] = request.form.get('stream')
-        session['reg_contact'] = request.form.get('contact')
-        session['reg_email'] = request.form.get('email')
-        session['reg_teacher'] = request.form.get('teacher')
-    
-        return redirect(url_for('student_registration_step2'))
+        new_student = Student(
+            full_name=session.get('reg_name'),
+            roll_number=session.get('reg_roll'),
+            student_class=session.get('reg_class'),
+            division=session.get('reg_div'),
+            stream=session.get('reg_stream'),
+            phone=session.get('reg_contact'),
+            email=session.get('reg_email'),
+            class_teacher=session.get('reg_teacher')
+        )
+        
+        db.session.add(new_student)
+        db.session.commit()
+        return redirect(url_for('student_registration_step3'))
     
     return render_template('StudentRegistration1.html')
 
-# Step 2: Login Details
+# Step 2:Student Login Details
 @app.route('/register/student/step-2', methods=['GET', 'POST'])
 def student_registration_step2():
     if request.method == 'POST':
         userid = request.form.get('userid')
         password = request.form.get('password')
 
-        session['reg_userid'] = request.form.get('userid')
-        session['reg_password'] = request.form.get('password')
         
-        id = session.get('reg_userid')
-        password = session.get('reg_password')
-        full_name = session.get('reg_name')
-        roll_number = session.get('reg_roll')
-        student_class = session.get('reg_class')
-        division = session.get('reg_div')
-        stream = session.get('reg_stream')
-        phone = session.get('reg_contact')
-        email = session.get('reg_email')
-        class_teacher = session.get('reg_teacher')
+        
+        new_student = StudentPassword(
+            password=password,
+        )
+
+        db.session.add(new_student)
+        db.session.commit()
         
         return redirect(url_for('student_registration_step3'))
     
