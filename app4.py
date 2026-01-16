@@ -77,8 +77,7 @@ def login_required(role):
         return wrapper
     return decorator
 
-# ---------------- LOGIN ROUTE ----------------
-@app.route("/", methods=["GET", "POST"])
+# ---------------- LOGIN ROUTE ---------------
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -100,7 +99,7 @@ def login():
         elif role == "student":
             user = Student.query.filter_by(roll_number=user_id).first()
 
-        if user and check_password_hash(user.password, password):
+        if user and user.password == password:
             session["role"] = role
             session["user_id"] = user_id
 
