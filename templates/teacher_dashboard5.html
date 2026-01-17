@@ -49,7 +49,7 @@
         </div>
         <button class="flex items-center gap-2 border border-gray-200 px-4 py-1.5 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50 transition">
             <i data-lucide="log-out" class="w-4 h-4"></i>
-            <a href="C:\Users\Dell\OneDrive\Desktop\technijas\Sign Up\signup.html">
+            <a href="{{ url_for('index') }}">
             Logout</a>
         </button>
     </nav>
@@ -71,37 +71,37 @@
             <div class="bg-white rounded-3xl sidebar-card border border-gray-50 overflow-hidden">
                 <ul class="flex flex-col py-2">
                     <li>
-                        <a href="teadash1.html" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
+                        <a href="{{url_for('teacher_dashboard')}}" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
                             <i data-lucide="users" class="w-5 h-5 text-gray-400"></i>
                             <span class="text-[15px] font-medium">Approve Students</span>
                         </a>
                     </li>
                     <li>
-                        <a href="teadash2.html" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
+                        <a href="{{url_for('teacher_dashboard1')}}" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
                             <i data-lucide="clock" class="w-5 h-5 text-gray-400"></i>
                             <span class="text-[15px] font-medium">My Availability</span>
                         </a>
                     </li>
                     <li>
-                        <a href="teadash3.html" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
+                        <a href="{{url_for('teacher_dashboard2')}}" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
                             <i data-lucide="calendar" class="w-5 h-5 text-gray-400"></i>
                             <span class="text-[15px] font-medium">View Timetable</span>
                         </a>
                     </li>
                     <li>
-                        <a href="teadash4.html" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
+                        <a href="{{url_for('teacher_dashboard3')}}" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
                             <i data-lucide="bell" class="w-5 h-5 text-gray-400"></i>
                             <span class="text-[15px] font-medium">View Notices</span>
                         </a>
                     </li>
                     <li>
-                        <a href="teadash5.html" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
+                        <a href="{{url_for('teacher_dashboard4')}}" class="flex items-center gap-4 px-6 py-4 text-gray-500 hover:bg-gray-50 transition">
                             <i data-lucide="plus-circle" class="w-5 h-5 text-gray-400"></i>
                             <span class="text-[15px] font-medium">Post Notice</span>
                         </a>
                     </li>
                     <li>
-                        <a href="teadash6.html" class="flex items-center gap-4 px-6 py-4 active-nav-green mx-2 rounded-2xl">
+                        <a href="{{url_for('teacher_dashboard5')}}" class="flex items-center gap-4 px-6 py-4 active-nav-green mx-2 rounded-2xl">
                             <i data-lucide="send" class="w-5 h-5"></i>
                             <span class="text-[15px] font-bold">Send Request</span>
                         </a>

@@ -42,7 +42,7 @@
             </div>
         </div>
         <button class="flex items-center gap-2 border border-gray-200 px-4 py-1.5 rounded-lg text-gray-600 hover:bg-gray-50 transition">
-            <i data-lucide="log-out" class="w-4 h-4"></i><a href="C:\Users\Dell\OneDrive\Desktop\technijas\Sign Up\signup.html">
+            <i data-lucide="log-out" class="w-4 h-4"></i><a href="{{ url_for('index') }}">
             <span class="text-sm font-medium">Logout</span></a>
         </button>
     </header>
@@ -74,31 +74,31 @@
             <nav class="bg-white rounded-2xl sidebar-shadow overflow-hidden border border-gray-50">
                 <ul class="flex flex-col">
                     <li>
-                        <a href="addash1.html" class="flex items-center gap-3 px-6 py-4 custom-gradient-btn text-white font-medium">
+                        <a href="{{url_for('admin_dashboard')}}" class="flex items-center gap-3 px-6 py-4 custom-gradient-btn text-white font-medium">
                             <i data-lucide="sparkles" class="w-5 h-5"></i>
                             Generate Timetable
                         </a>
                     </li>
                     <li>
-                        <a href="addash2.html" class="flex items-center gap-3 px-6 py-4 text-gray-600 hover:bg-gray-50 transition">
+                        <a href="{{url_for('admin_dashboard1')}}" class="flex items-center gap-3 px-6 py-4 text-gray-600 hover:bg-gray-50 transition">
                             <i data-lucide="edit-3" class="w-5 h-5 text-gray-400"></i>
                             Edit Timetable
                         </a>
                     </li>
                     <li>
-                        <a href="addash3.html" class="flex items-center gap-3 px-6 py-4 text-gray-600 hover:bg-gray-50 transition border-t border-gray-50">
+                        <a href="{{url_for('admin_dashboard2')}}" class="flex items-center gap-3 px-6 py-4 text-gray-600 hover:bg-gray-50 transition border-t border-gray-50">
                             <i data-lucide="plus-circle" class="w-5 h-5 text-gray-400"></i>
                             Post Notice
                         </a>
                     </li>
                     <li>
-                        <a href="addash4.html" class="flex items-center gap-3 px-6 py-4 text-gray-600 hover:bg-gray-50 transition border-t border-gray-50">
+                        <a href="{{url_for('admin_dashboard3')}}" class="flex items-center gap-3 px-6 py-4 text-gray-600 hover:bg-gray-50 transition border-t border-gray-50">
                             <i data-lucide="bell" class="w-5 h-5 text-gray-400"></i>
                             View Notices
                         </a>
                     </li>
                     <li>
-                        <a href="addash5.html" class="flex items-center gap-3 px-6 py-4 text-gray-600 hover:bg-gray-50 transition border-t border-gray-50">
+                        <a href="{{url_for('admin_dashboard4')}}" class="flex items-center gap-3 px-6 py-4 text-gray-600 hover:bg-gray-50 transition border-t border-gray-50">
                             <i data-lucide="inbox" class="w-5 h-5 text-gray-400"></i>
                             View Requests
                         </a>

@@ -87,15 +87,12 @@ def login():
 
         user = None
 
-        # ---- ADMIN LOGIN ----
         if role == "admin":
             user = Admin.query.filter_by(admin_id=user_id).first()
 
-        # ---- TEACHER LOGIN ----
         elif role == "teacher":
             user = Teacher.query.filter_by(teacher_id=user_id).first()
 
-        # ---- STUDENT LOGIN ----
         elif role == "student":
             user = Student.query.filter_by(roll_number=user_id).first()
 
@@ -112,7 +109,7 @@ def login():
 
         flash("Invalid credentials", "danger")
 
-    return render_template("login.html")
+    return render_template("Signin.html")
 
 # ---------------- DASHBOARDS ----------------
 @app.route("/admin/dashboard")
@@ -148,22 +145,22 @@ def teacher_dashboard():
 
 @app.route("/teacher/dashboard/availability")
 @login_required("teacher")
-def teacher_dashboard2():
+def teacher_dashboard1():
     return render_template("teacher_dashboard1.html")
 
 @app.route("/teacher/dashboard/view_timetable")
 @login_required("teacher")
-def teacher_dashboard3():
+def teacher_dashboard2():
     return render_template("teacher_dashboard2.html")
 
 @app.route("/teacher/dashboard/view_notice")
 @login_required("teacher")
-def teacher_dashboard4():
+def teacher_dashboard3():
     return render_template("teacher_dashboard3.html")
 
 @app.route("/teacher/dashboard/post_notice")
 @login_required("teacher")
-def teacher_dashboard5():
+def teacher_dashboard4():
     return render_template("teacher_dashboard4.html")
 
 @app.route("/teacher/dashboard/send_request")
