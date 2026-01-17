@@ -82,6 +82,24 @@ def student_registration_step1():
     
     return render_template('StudentRegistration1.html')
 
+@app.route("/register/student", methods=["GET", "POST"])
+def student_registration_step1():
+    if request.method == "POST":
+        # later you can save step-1 data in session or DB
+        return redirect(url_for("student_registration_step2"))
+
+    return render_template("StudentRegistration1.html")
+
+
+@app.route("/register/student/step2", methods=["GET", "POST"])
+def student_registration_step2():
+    if request.method == "POST":
+        # save final student data here
+        return redirect(url_for("login"))
+
+    return render_template("StudentRegistration2.html")
+
+
 # Step 2:Student Login Details
 @app.route('/register/student/step-2', methods=['GET', 'POST'])
 def student_registration_step2():

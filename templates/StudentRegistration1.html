@@ -34,7 +34,7 @@
                 <span class="step "></span>
             </div>
 
-            <form id="registrationForm" method="POST" action="/register/student">
+            <form id="registrationForm" method="POST" action="{{ url_for('student_registration_step1') }}">
                 <div class="form-row">
                     <div class="form-group">
                         <label>Full Name</label>
@@ -89,7 +89,7 @@
                     <input type="text"name="teacher"  placeholder="Enter your class teacher's name" required>
                 </div>
 
-                <button type="submit" class="continue-btn"><a href="{{url_for('student_registration_step2')}}"></a>
+                <button type="submit" class="continue-btn">
                     Continue <i class="fas fa-arrow-right"></i>
                 </button>
 
